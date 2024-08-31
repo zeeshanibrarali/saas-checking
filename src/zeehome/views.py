@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from visits.models import PageVist
-def home_page_view(request, *args, **kwargs):
+def home_view(request, *args, **kwargs):
     queryset  = PageVist.objects.all()
     my_context = {
         "queryset": queryset.count()
